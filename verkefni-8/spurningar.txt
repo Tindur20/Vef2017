@@ -1,0 +1,27 @@
+1. Besta leiðin til að binda event með element er með að nota "DOM Level 2 event listeners",
+   ólíkt hinum leiðunum er hægt að binda margar aðferðir við eventið og hægt er að aðskilja
+   það við html skjali sem er talið vera góð hugmynd.
+
+2.  callback er hægt að útskýra sem function sem er sett sem parameter, til dæmis með sum föll
+    í javascript er hægt að kalla í functions
+
+    Sýnidæmi:
+
+    element.addEventListener("click", false);
+
+ 3. skill ekki allveg.
+
+ 4. 
+   function checkUsername() {
+      var target = e.target;
+   }
+   var el = document.getElementById('username');
+   el.addEventListener('blur', checkUsername, false);
+ 
+   //Var lítið 'L' í 'addEventListener'
+
+ 5. Það að eigi ekki að initiate-a capture.
+
+ 6.
+	 a. stopPropagation () aðferð stöðvar freyðandi áevent til þátta parent, koma í veg fyrir einhver parent event handlers frá því að vera keyrð.
+  	 b. preventDefault() method aflýsir event ef það er aflýsanlegt, meinginn er að ef það er default action á því þá mun það ekki vera lengur.
