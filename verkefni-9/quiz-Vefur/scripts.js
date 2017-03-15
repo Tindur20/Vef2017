@@ -36,7 +36,7 @@ shuffleArray(Spurningar);
 
  function skrifari(){
   if (Spurningar.length <= teljari) {
-    el_spurning.innerHTML = "Spurningarnar eru búnar!";
+    el_spurning.innerHTML = "Engar spurningar eftir.";
 
   }
   else {
