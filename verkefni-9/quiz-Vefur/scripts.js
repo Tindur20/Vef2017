@@ -6,16 +6,16 @@ var el_spurning = document.getElementById("Spurning");
 
 
 var teljari = 0;
-var plus = 0;
-var minus = 0;
-var min = document.getElementById('score2');
-var add = document.getElementById('score1');
+var haegast = 0;
+var laegast = 0;
+var stigHaegast = document.getElementById('stig1');
+var stiglaegast = document.getElementById('stig2');
 
 var Spurningar = [
     {spurning: "Hvað er 5 * 5?", svarmoguleiki: ["5", "10", "25", "30"], rettSvar: "25"},
-    {spurning: "Hvað er nýjasti síminn hjá google?", svarmoguleiki: ["Pixel", "iOS 10", "Nokia 3310"], rettSvar: "Pixel"},
-    {spurning: "Hvort er þessi spurning rétt eða röng?", svarmoguleiki: ["Rétt", "Röng", "????"], rettSvar: "????"},
-    {spurning: "Hvað er fjórða plánetan í sólkerfinu okkar?", svarmoguleiki: ["Jörðin", "Venus", "Merkúríus", "Mars"], rettSvar: "Mars"}
+    {spurning: "Hvað update er í stýrirkefinu í apple?", svarmoguleiki: ["IOS 10.2.1 ", "IOS 10.2", "iOS 10.1.1"], rettSvar: "IOS 10.2.1"},
+    {spurning: "Hvenar kom Counter-Strike: Global offensive út?", svarmoguleiki: ["2012", "2013", "2014"], rettSvar: "2012"},
+    {spurning: "Hvenar kom Overwatch út?", svarmoguleiki: ["2012", "2014", "2016", "2017"], rettSvar: "2016"}
   ];
 
   function shuffleArray(array) {
@@ -64,27 +64,27 @@ shuffleArray(Spurningar);
 
 function rett(){
   teljari++;
-  plus++;
+  haegast++;
   fjarlaegja();
   uppfaera();
 }
 
 function rangt(){
   teljari++;
-  minus++;
+  laegast++;
   fjarlaegja();
   uppfaera();
 }
 
 function uppfaera(){
-  min.innerHTML = minus;
-  add.innerHTML = plus;
+  stigHaegast.innerHTML = laegast;
+  stiglaegast.innerHTML = haegast;
 }
 
 function fjarlaegja(){
-  var myNode = document.getElementById("Spurning1");
-  while (myNode.firstChild) {
-    myNode.removeChild(myNode.firstChild);
+  var el_fjarlaegja = document.getElementById("Spurning1");
+  while (el_fjarlaegja.firstChild) {
+    el_fjarlaegja.removeChild(el_fjarlaegja.firstChild);
   }
   skrifari();
 }
