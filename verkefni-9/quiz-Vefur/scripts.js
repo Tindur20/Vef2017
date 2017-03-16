@@ -8,8 +8,8 @@ var el_spurning = document.getElementById("Spurning");
 var teljari = 0;
 var haegast = 0;
 var laegast = 0;
-var stiglaegast = document.getElementById('score2');
-var stigHaegast = document.getElementById('score1');
+var stiglaegast = document.getElementById('stig2');
+var stigHaegast = document.getElementById('sig1');
 
 var Spurningar = [
     {spurning: "Hvað er 5 * 5?", svarmoguleiki: ["5", "10", "25", "30"], rettSvar: "25"},
