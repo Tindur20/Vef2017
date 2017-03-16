@@ -77,8 +77,8 @@ function rangt(){
 }
 
 function uppfaera(){
-  stigHaegast.innerHTML = laegast;
-  stiglaegast.innerHTML = haegast;
+  stiglaegast.innerHTML = laegast;
+  stigHaegast.innerHTML = haegast;
 }
 
 function fjarlaegja(){
